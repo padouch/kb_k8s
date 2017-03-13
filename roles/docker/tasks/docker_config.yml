@@ -1,0 +1,5 @@
+---
+- name: Docker init file
+  template: src=docker-conf.j2 dest=/etc/default/docker backup=yes
+  notify: 
+    - Restart Docker
